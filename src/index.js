@@ -1,12 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function Box1() {
+  return <div className="box">欢迎界面</div>;
+}
+function Box2() {
+  return <div className="box">登陆界面</div>;
+}
+function Box3() {
+  return <div className="box">注册界面</div>;
+}
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Link to="/">
+          <button>欢迎</button>
+        </Link>
+        <Link to="/register">
+          <button>登录</button>
+        </Link>
+        <Link to="/welcome">
+          <button>注册</button>
+        </Link>
+        <Route path="/" exact component={Box1} />
+        <Route path="/register/" component={Box2} />
+        <Route path="/welcome/" component={Box3} />
+      </div>
+    </Router>
+  );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
