@@ -26,9 +26,9 @@ function App() {
         <Link to="/welcome">
           <Button name="注册"></Button>
         </Link>
-        <Route path="/" exact component={Box1} />
-        <Route path="/register/" component={Box2} />
-        <Route path="/welcome/" component={Box3} />
+        <Route path="/react-router/build/index.html" exact component={Box1} />
+        <Route path="/react-router/build/index.html/register/" component={Box2} />
+        <Route path="/react-router/build/index.html/welcome/" component={Box3} />
       </div>
     </Router>
   );
