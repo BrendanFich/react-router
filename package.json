@@ -8,6 +8,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0"
   },
+  "homepage" : "https://brendanfich.github.io/react-router/build",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
